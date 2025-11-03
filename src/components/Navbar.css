@@ -1,0 +1,110 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  width: 100%;
+  height: 70px;
+  background: #0d1b2a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+nav h1 {
+  color: #00e5ff;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #e0e0e0;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: .3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: #00e5ff;
+  color: #000;
+}
+
+/* ------ Hamburger Menu ------ */
+.menu-icon {
+  display: none;
+  font-size: 32px;
+  color: #00e5ff;
+  cursor: pointer;
+}
+
+/* ------ Responsive Sidebar ------ */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    background: #0d1b2a;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: 0.4s ease-in-out;
+  }
+
+  /* Slide-in when active */
+  nav ul.menu.active {
+    right: 0;
+  }
+
+  nav ul li a {
+    font-size: 22px;
+  }
+
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.close-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  
+
+  .close-btn {
+    display: block;
+  }
+}

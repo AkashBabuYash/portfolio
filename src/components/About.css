@@ -1,0 +1,249 @@
+/* ===============================
+ ✅ ABOUT SECTION BASE
+=============================== */
+.about-section {
+  background: #0d1b2a;
+  color: #ffffff;
+  padding: 120px 8% 200px;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 46px;
+  font-weight: 900;
+  color: #00e5ff;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ===============================
+ ✅ 3 CARD GRID LAYOUT
+=============================== */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
+
+/* ✅ Card Style */
+.about-card {
+  background: rgba(8, 20, 33, 0.95);
+  border: 2px solid rgba(0,229,255,0.25);
+  border-radius: 14px;
+  padding: 26px;
+  min-height: 220px;
+  transition: 0.3s ease-in-out;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✅ Hover Glow */
+.about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 34px rgba(0,229,255,0.25);
+  border-color: #00e5ff;
+}
+
+.about-card h3 {
+  font-size: 20px;
+  color: #00e5ff;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.about-card p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ===============================
+ ✅ SUBTLE ENTRANCE ANIMATION
+=============================== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.about-card {
+  animation: fadeUp 0.6s ease forwards;
+}
+.about-card:nth-child(2) { animation-delay: 0.1s; }
+.about-card:nth-child(3) { animation-delay: 0.2s; }
+
+/* ===============================
+ ✅ FOOTER — FIXED BOTTOM
+=============================== */
+.about-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #081521;
+  border-top: 2px solid #00e5ff;
+  box-shadow: 0 -4px 18px rgba(0,229,255,0.38);
+
+  color: #00e5ff;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 16px;
+  font-weight: 600;
+
+  z-index: 999;
+}
+
+.about-footer a {
+  text-decoration: none;
+  color: #00e5ff;
+}
+
+/* ===============================
+ ✅ RESPONSIVE FIXES
+=============================== */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 110px 6% 240px;
+    text-align: center;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-card {
+    min-height: auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-title {
+    font-size: 34px;
+  }
+
+  .about-card h3 {
+    font-size: 18px;
+  }
+
+  .about-card p {
+    font-size: 15px;
+  }
+
+  .about-footer {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+    text-align: center;
+    padding: 14px 0;
+  }
+}
+/* ======================================================
+ ✅ Education, Projects & Languages Boxes (about-container)
+====================================================== */
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  width: 100%;
+}
+
+/* Box Design */
+.about-box {
+  background: rgba(8, 20, 33, 0.95);
+  padding: 26px;
+  border-radius: 14px;
+  border: 2px solid rgba(0,229,255,0.25);
+  box-shadow: 0 10px 35px rgba(0, 229, 255, 0.10);
+  transition: 0.3s ease-in-out;
+  text-align: left;
+  overflow: hidden;
+}
+
+/* Glow Hover Effect */
+.about-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 50px rgba(0,229,255,0.25);
+  border-color: #00e5ff;
+}
+
+/* Heading Style */
+.about-box h2 {
+  font-size: 22px;
+  color: #00e5ff;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+}
+
+/* List Styles */
+.about-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-box li {
+  font-size: 17px;
+  color: #d9f7ff;
+  margin-bottom: 10px;
+  line-height: 1.45;
+  padding-left: 18px;
+  position: relative;
+}
+
+/* Bullet Accent */
+.about-box li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #00e5ff;
+  font-size: 20px;
+}
+
+/* 📱 Responsive layout */
+@media (max-width: 1024px) {
+  .about-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .about-box {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .about-box h2 {
+    font-size: 20px;
+  }
+
+  .about-box li {
+    font-size: 15px;
+    max-width: 95%;
+    margin: 0 auto 8px;
+    padding-left: 15px;
+  }
+
+  .about-box ul {
+    margin: 0 auto;
+    width: 100%;
+    text-align: left;
+  }
+}
